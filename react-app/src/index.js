@@ -10,6 +10,7 @@ import Exercice2 from './routes/Exercice2';
 import Exercice4 from './routes/Exercice4';
 import Exercice5 from './routes/Exercice5';
 import Exercice6 from './routes/Exercice6';
+import Navbar from './Navigation/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
