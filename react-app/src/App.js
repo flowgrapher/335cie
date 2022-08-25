@@ -13,7 +13,7 @@ function App() {
         <Link to='/exercice2'>Ex.2</Link>
         <Link to='/exercice4'>Ex.4</Link>
         <Link to='/exercice5'>Ex.5</Link>
-        <Link to='/exercice6'>Ex.6</Link>
+        <Link to='/exercice6/login'>Ex.6</Link>
       </header>
     </div>
   );

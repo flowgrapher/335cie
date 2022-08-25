@@ -21,7 +21,7 @@ root.render(
       <Route path='exercice2' element={<Exercice2 />} />
       <Route path='exercice4' element={<Exercice4 />} />
       <Route path='exercice5' element={<Exercice5 />} />
-      <Route path='exercice6' element={<Exercice6 />} />
+      <Route path='exercice6/:type' element={<Exercice6 />} />
       <Route path='profile' element={<Profile />} />
     </Routes>
   </BrowserRouter>
