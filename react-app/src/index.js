@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import Profile from './routes/Profile';
 import Exercice1 from './routes/Exercice1';
 import Exercice2 from './routes/Exercice2';
+import Exercice3 from './routes/Exercice3';
 import Exercice4 from './routes/Exercice4';
 import Exercice5 from './routes/Exercice5';
 import Exercice6 from './routes/Exercice6';
@@ -20,6 +21,7 @@ root.render(
       <Route path='/' element={<App />} />
       <Route path='exercice1' element={<Exercice1 />} />
       <Route path='exercice2' element={<Exercice2 />} />
+      <Route path='exercice3' element={<Exercice3 />} />
       <Route path='exercice4' element={<Exercice4 />} />
       <Route path='exercice5' element={<Exercice5 />} />
       <Route path='exercice6/:type' element={<Exercice6 />} />

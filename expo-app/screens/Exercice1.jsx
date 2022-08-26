@@ -1,9 +1,14 @@
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import {
+  Button,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React, { useState } from 'react';
 
-
-const Exercice1 = ({navigation}) => {
-
+const Exercice1 = ({ navigation }) => {
   const [count, setCount] = useState(0);
 
   const increment = () => {
@@ -25,10 +30,10 @@ const Exercice1 = ({navigation}) => {
         <Text>Clic moi aussi</Text>
       </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
 
-export default Exercice1
+export default Exercice1;
 
 const styles = StyleSheet.create({
   container: {
@@ -42,4 +47,4 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     marginVertical: 10,
   },
-})
+});
