@@ -44,6 +44,11 @@ function App() {
                   Exercice 6
                 </button>
               </Link>
+              <Link to='/exercice7'>
+                <button class='bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded mb-8'>
+                  Exercice 7
+                </button>
+              </Link>
             </div>
           </header>
         </div>
