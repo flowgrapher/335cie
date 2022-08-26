@@ -5,8 +5,7 @@ import Navbar from './Navigation/Navbar';
 
 function App() {
   return (
-    <div className='App'>
-      <Navbar />
+    <div className='App' class='bg-gray-200 p-4 justify-center'>
       <header className='App-header'>
         <p>335 CIE - React</p>
         <Link to='/exercice1'>Ex.1</Link>
