@@ -12,6 +12,7 @@ import Exercice4 from './routes/Exercice4';
 import Exercice5 from './routes/Exercice5';
 import Exercice6 from './routes/Exercice6';
 import Exercice7 from './routes/Exercice7';
+import Exercice8 from './routes/Exercice8';
 import Navbar from './Navigation/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -27,6 +28,7 @@ root.render(
       <Route path='exercice5' element={<Exercice5 />} />
       <Route path='exercice6/:type' element={<Exercice6 />} />
       <Route path='exercice7' element={<Exercice7 />} />
+      <Route path='exercice8' element={<Exercice8 />} />
       <Route path='profile' element={<Profile />} />
     </Routes>
   </BrowserRouter>

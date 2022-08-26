@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Geolocation } from '@capacitor/geolocation';
 
-export default function Exercice3() {
+export default function Exercice7() {
   const [loc, setLoc] = useState(null);
   const [coordinates, setCoordinates] = useState(null);
 
