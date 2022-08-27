@@ -5,7 +5,10 @@ export default function Exercice1() {
   const [count, setCount] = React.useState(0);
 
   const increment = () => {
-    setCount(count + 1);
+    //version simple
+    //setCount(count + 1);
+    //version pro car gère l'asynchronisme
+    setCount(prevCount => prevCount + 1);
   };
 
   const decrement = () => {
