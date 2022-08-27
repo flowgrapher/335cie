@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Geolocation } from '@capacitor/geolocation';
+import { Button } from '@mui/material';
 
 export default function Exercice7() {
   const [loc, setLoc] = useState(null);
@@ -20,12 +21,12 @@ export default function Exercice7() {
       <div class='container w-full max-w-xs'>
         <h2 class='text-center text-gray-500'>Exercice 7</h2>
         <div class='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
-          <p class='mb-3'>Géolocalisation</p>
-          <p class='mb-1.5'>Altitude : {loc?.coords.altitude}</p>
-          <p class='mb-1.5'>Latitude : {loc?.coords.latitude}</p>
-          <p class='mb-1.5'>Longitude : {loc?.coords.longitude}</p>
+          <p class='text-2xl mb-3'>Géolocalisation</p>
+          <p class='mb-2'>Altitude : <span className='font-bold'>{loc?.coords.altitude}</span></p>
+          <p class='mb-2 '>Latitude : <span className='font-bold'>{loc?.coords.latitude}</span></p>
+          <p class='mb-5'>Longitude : <span className='font-bold'>{loc?.coords.longitude}</span></p>
 
-          <button onClick={getPosition}>Position</button>
+          <Button variant="contained" onClick={getPosition}>Position</Button>
         </div>
       </div>
     </main>

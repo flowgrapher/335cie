@@ -74,15 +74,13 @@ function App() {
       <div class='container w-full max-w-md'>
         <h2 class='text-center text-gray-500'>Hello World</h2>
         <div class='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'>
-          <header>
-            <h1 class='text-3xl text-center font-bold text-indigo-900 mb-5'>
-              CIE 335 - React
-            </h1>
-            <img src={logo} className='App-logo' alt='logo' />
-            <div class='h-30 grid grid-cols-3 gap-3 content-start mt-5'>
-              {renderExercices()}
-            </div>
-          </header>
+          <h1 class='text-3xl text-center font-bold text-indigo-900 mb-5'>
+            CIE 335 - React
+          </h1>
+          <img src={logo} className='App-logo' alt='logo' />
+          <div class='h-30 grid grid-cols-3 gap-3 content-start mt-5'>
+            {renderExercices()}
+          </div>
         </div>
       </div>
     </div>

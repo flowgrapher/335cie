@@ -6,7 +6,13 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 const navigation = [
   { name: 'CIE 335 ', href: '/', current: true },
   { name: 'Ex1', href: '/Exercice1', current: false },
+  { name: 'Ex2', href: '/Exercice2', current: false },
+  { name: 'Ex3', href: '/Exercice3', current: false },
+  { name: 'Ex4', href: '/Exercice4', current: false },
+  { name: 'Ex5', href: '/Exercice5', current: false },
   { name: 'Ex6', href: '/Exercice6/login', current: false },
+  { name: 'Ex7', href: '/Exercice7', current: false },
+  { name: 'Ex8', href: '/Exercice8', current: false },
 ];
 
 function classNames(...classes) {

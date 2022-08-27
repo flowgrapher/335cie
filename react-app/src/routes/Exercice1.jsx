@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Exercice1() {
   const [count, setCount] = React.useState(0);

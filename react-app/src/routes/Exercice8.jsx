@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Camera, CameraResultType } from '@capacitor/camera';
+import { Button } from '@mui/material';
+import CameraEnhanceIcon from '@mui/icons-material/CameraEnhance';
+
 
 export default function Exercice8() {
   const [image, setImage] = React.useState(null);
 
-  let imageElement = null;
   const takePicture = async () => {
     const image = await Camera.getPhoto({
       quality: 90,
@@ -26,7 +28,11 @@ export default function Exercice8() {
           <p>
             <img src={image} />
           </p>
-          <button onClick={takePicture}>Prendre photo</button>
+          <div class='text-center my-3'>
+          <Button variant="contained" onClick={takePicture} startIcon={<CameraEnhanceIcon />}>
+            Photo
+          </Button>
+          </div>
         </div>
       </div>
     </main>
