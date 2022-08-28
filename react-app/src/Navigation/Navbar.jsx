@@ -2,6 +2,9 @@
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LanguageIcon from '@mui/icons-material/Language';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const navigation = [
   { name: 'CIE 335 ', href: '/', current: true },
@@ -64,39 +67,42 @@ export default function Example() {
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href='#'
+                              href='https://github.com/flowgrapher'
+                              target={'_blank'}
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
-                              Your Profile
+                              <GitHubIcon /> Github
                             </a>
                           )}
                         </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href='#'
+                              href='http://fl0.me/'
+                              target={'_blank'}
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
-                              Settings
+                              <LanguageIcon /> Fl0.me
                             </a>
                           )}
                         </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href='#'
+                              href='https://www.linkedin.com/in/floriangay/'
+                              target={'_blank'}
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
-                              Sign out
+                              <LinkedInIcon /> Linkedin
                             </a>
                           )}
                         </Menu.Item>

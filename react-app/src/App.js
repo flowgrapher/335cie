@@ -7,56 +7,15 @@ function App() {
   const [exercice, setExercice] = useState({});
 
   let exerciceList = [
-    {
-      id: 1,
-      name: 'Exercice 1',
-      shortname: 'Ex1',
-      path: '/exercice1',
-    },
-    {
-      id: 2,
-      name: 'Exercice 2',
-      shortname: 'Ex2',
-      path: '/exercice2',
-    },
-    {
-      id: 3,
-      name: 'Exercice 3',
-      shortname: 'Ex3',
-      path: '/exercice3',
-    },
-    {
-      id: 4,
-      name: 'Exercice 4',
-      shortname: 'Ex4',
-      path: '/exercice4',
-    },
-    {
-      id: 5,
-      name: 'Exercice 5',
-      shortname: 'Ex5',
-      path: '/exercice5',
-    },
-    {
-      id: 6,
-      name: 'Exercice 6',
-      shortname: 'Ex6',
-      path: '/exercice6/login',
-    },
-    {
-      id: 7,
-      name: 'Exercice 7',
-      shortname: 'Ex7',
-      path: '/exercice7',
-    },
-    {
-      id: 8,
-      name: 'Exercice 8',
-      shortname: 'Ex8',
-      path: '/exercice8',
-    },
+    { id: 1, name: 'Exercice 1', shortname: 'Ex1', path: '/exercice1' },
+    { id: 2, name: 'Exercice 2', shortname: 'Ex2', path: '/exercice2' },
+    { id: 3, name: 'Exercice 3', shortname: 'Ex3', path: '/exercice3' },
+    { id: 4, name: 'Exercice 4', shortname: 'Ex4', path: '/exercice4' },
+    { id: 5, name: 'Exercice 5', shortname: 'Ex5', path: '/exercice5' },
+    { id: 6, name: 'Exercice 6', shortname: 'Ex6', path: '/exercice6/login' },
+    { id: 7, name: 'Exercice 7', shortname: 'Ex7', path: '/exercice7' },
+    { id: 8, name: 'Exercice 8', shortname: 'Ex8', path: '/exercice8' },
   ];
-
   const renderExercices = () => {
     return exerciceList.map((exercice, index) => (
       <>

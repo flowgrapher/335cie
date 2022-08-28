@@ -35,6 +35,7 @@ root.render(
       <Route path='exercice8' element={<Exercice8 />} />
       <Route path='profile' element={<Profile />} />
     </Routes>
+    <p class='text-center text-gray-500 text-xs'>CIE 335 © 2022</p>
   </BrowserRouter>
 );
 
