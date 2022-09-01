@@ -15,6 +15,7 @@ function App() {
     { id: 6, name: 'Exercice 6', shortname: 'Ex6', path: '/exercice6/login' },
     { id: 7, name: 'Exercice 7', shortname: 'Ex7', path: '/exercice7' },
     { id: 8, name: 'Exercice 8', shortname: 'Ex8', path: '/exercice8' },
+    { id: 8, name: 'Exercice 9', shortname: 'Ex9', path: '/exercice9' },
   ];
   const renderExercices = () => {
     return exerciceList.map((exercice, index) => (
