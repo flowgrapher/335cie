@@ -1,35 +1,44 @@
 import * as React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
 function App() {
-  const [calcul, setCalcul] = React.useState(0);
+  const [calcul, setCalcul] = React.useState("");
 
   const [decimal, setDecimal] = React.useState(0);
-  const [hexadecimal, setHexadecimal] = React.useState(0);
-  const [binary, setBinary] = React.useState(0);
+  const [hexadecimal, setHexadecimal] = React.useState("");
+  const [binary, setBinary] = React.useState("");
 
-  const convertDecimalToBinary = (decimalNumber) => {
-    if (!isNaN(decimalNumber)) return (decimalNumber >>> 0).toString(2);
-    return false;
-  };
+  const updateCalcul = (e) => {
+    //Utilise la valeur du champ name
+    let number = e.target.name;
 
-  const numberClickHandler = (e) => {
-    const value = e.target.value;
-    console.log('Clic : ' + e.target.value);
-    // if (value) {
-    //   this.setCalcul(value);
-    // }
-  };
+    console.log('Clic sur ' + number);
+
+    if (number == 'c') {
+      setCalcul('');
+      setBinary('');
+      setHexadecimal('');
+    } else {
+      // Concatène la valeur du champ name avec la valeur de calcul
+      let newCalcul = calcul.concat(number);
+      setCalcul(newCalcul);
+
+      // Conversion decimal vers binaire
+      let binaire = Number(newCalcul).toString(2)
+      setBinary(binaire);
+
+      // Conversion decimal vers hexadecimal
+      let hexa = Number(newCalcul).toString(16)
+      setHexadecimal(hexa);
+    }
+  }
 
   return (
     <div className='App'>
@@ -39,24 +48,24 @@ function App() {
           label='Decimal'
           variant='outlined'
           size='small'
+          value={calcul}
           style={{ margin: '5px' }}
-          onChange={(e) => setHexadecimal(e.target.value)}
         />
         <TextField
           id='outlined-basic'
           label='Hexadecimal'
           variant='outlined'
           size='small'
+          value={hexadecimal}
           style={{ margin: '5px' }}
-          onChange={(e) => setHexadecimal(e.target.value)}
         />
         <TextField
           id='outlined-basic'
           label='Binaire'
           variant='outlined'
           size='small'
+          value={binary}
           style={{ margin: '5px' }}
-          onChange={(e) => setHexadecimal(e.target.value)}
         />
         <FormControl>
           <RadioGroup
@@ -77,54 +86,37 @@ function App() {
           </RadioGroup>
         </FormControl>
 
-        <ButtonGroup
-          variant='outlined'
-          aria-label='outlined button group'
-          size='large'
-        >
-          <Button>C</Button>
-          <Button>D</Button>
-          <Button>E</Button>
-          <Button>F</Button>
-        </ButtonGroup>
-        <ButtonGroup
-          variant='outlined'
-          aria-label='outlined button group'
-          size='large'
-        >
-          <Button onClick={numberClickHandler}>8</Button>
-          <Button onClick={numberClickHandler}>9</Button>
-          <Button>A</Button>
-          <Button>B</Button>
-        </ButtonGroup>
-        <ButtonGroup
-          variant='outlined'
-          aria-label='outlined button group'
-          size='large'
-        >
-          <Button onClick={numberClickHandler}>4</Button>
-          <Button onClick={numberClickHandler}>5</Button>
-          <Button onClick={numberClickHandler}>6</Button>
-          <Button onClick={numberClickHandler}>7</Button>
-        </ButtonGroup>
-        <ButtonGroup
-          variant='outlined'
-          aria-label='outlined button group'
-          size='large'
-        >
-          <Button>0</Button>
-          <Button>1</Button>
-          <Button>2</Button>
-          <Button>3</Button>
+        <ButtonGroup variant='outlined' aria-label='outlined button group' size='large'>
+          <Button onClick={updateCalcul} name='c'>C</Button>
+          <Button onClick={updateCalcul} name='d'>D</Button>
+          <Button onClick={updateCalcul} name='e'>E</Button>
+          <Button onClick={updateCalcul} name='f'>F</Button>
         </ButtonGroup>
 
-        <ButtonGroup
-          variant='outlined'
-          aria-label='outlined button group'
-          size='large'
-        >
-          <Button>C</Button>
-          <Button>Erase</Button>
+        <ButtonGroup variant='outlined' aria-label='outlined button group' size='large'>
+          <Button onClick={updateCalcul} name='8'>8</Button>
+          <Button onClick={updateCalcul} name='9'>9</Button>
+          <Button onClick={updateCalcul} name='a'>A</Button>
+          <Button onClick={updateCalcul} name='b'>B</Button>
+        </ButtonGroup>
+
+        <ButtonGroup variant='outlined' aria-label='outlined button group' size='large'>
+          <Button onClick={updateCalcul} name='4'>4</Button>
+          <Button onClick={updateCalcul} name='5'>5</Button>
+          <Button onClick={updateCalcul} name='6'>6</Button>
+          <Button onClick={updateCalcul} name='7'>7</Button>
+        </ButtonGroup>
+
+        <ButtonGroup variant='outlined' aria-label='outlined button group' size='large'>
+          <Button onClick={updateCalcul} name='0'>0</Button>
+          <Button onClick={updateCalcul} name='1'>1</Button>
+          <Button onClick={updateCalcul} name='2'>2</Button>
+          <Button onClick={updateCalcul} name='3'>3</Button>
+        </ButtonGroup>
+
+        <ButtonGroup variant='outlined' aria-label='outlined button group' size='large'>
+          <Button onClick={updateCalcul} name='c'>C</Button>
+          <Button onClick={updateCalcul} name='back'>BACK</Button>
         </ButtonGroup>
 
         {calcul}
