@@ -18,6 +18,7 @@ import Exercice6 from './Routes/Exercice6';
 import Exercice7 from './Routes/Exercice7';
 import Exercice8 from './Routes/Exercice8';
 import Exercice9 from './Routes/Exercice9';
+import Exercice11 from './Routes/Exercice11';
 import Navbar from './Navigation/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -35,6 +36,7 @@ root.render(
       <Route path='exercice7' element={<Exercice7 />} />
       <Route path='exercice8' element={<Exercice8 />} />
       <Route path='exercice9' element={<Exercice9 />} />
+      <Route path='exercice11' element={<Exercice11 />} />
       <Route path='profile' element={<Profile />} />
     </Routes>
     <p class='text-center text-gray-500 text-xs'>CIE 335 © 2022</p>

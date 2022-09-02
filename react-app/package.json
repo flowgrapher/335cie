@@ -8,6 +8,7 @@
     "@capacitor/cli": "^4.1.0",
     "@capacitor/core": "^4.1.0",
     "@capacitor/geolocation": "^4.0.1",
+    "@capacitor/local-notifications": "^4.0.1",
     "@capacitor/motion": "^4.0.1",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
